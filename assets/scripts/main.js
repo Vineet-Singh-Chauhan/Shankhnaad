@@ -17,7 +17,15 @@ document.addEventListener( 'DOMContentLoaded', function() {
     perPage: 3,
     pagination: false,
     arrows: false,
-    padding: '1rem'
+    padding: '1rem',
+    breakpoints:{
+      640:{
+        perPage:1
+      },
+      1040:{
+        perPage:2
+      }
+    }
   } );
   splide.mount();
 } );
