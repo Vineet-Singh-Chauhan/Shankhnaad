@@ -1,0 +1,91 @@
+:root{
+    --font_eng: 'IBM Plex Sans Devanagari', sans-serif;
+    --font-hindi: 'Montserrat', sans-serif;
+    --heading-weight: 700;
+    --regular-weight:400;
+    --blue:#179BB1;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #01000E;
+    color:#ffffff;
+    font-family: var(--font_eng);
+    /* font-size: 26px; */
+}
+nav{
+    font-family: var(--font_eng);
+    font-weight: var(--heading-weight);
+    /* position: absolute; */
+}
+.navitem::after{
+    content:'';
+    height: 3px;
+    background-color: var(--blue);
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-radius: 2px;
+    transform-origin:right;
+    transform: scaleX(0);
+    transition:transform 250ms ease-in;
+}
+.navitem:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.navitem:hover{
+    cursor: pointer;
+}
+.active::after{
+    transform:scale(1);
+}
+
+
+/*landing section*/
+.landing{
+    background-image: url("../images/LandingBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken(20%);
+    background-position:right;
+}
+
+@media(max-width:1034px){
+    /* .right-menu{ */
+        /* flex-direction: column; */
+        /* margin-right:20px; */
+    /* } */
+    /* .navbar{ */
+        /* flex-direction: column; */
+        /* margin-left:20px; */
+        /* background-color: #01000E; */
+    /* } */
+    /* .navitem{
+        width: fit-content;
+    } */
+    /* .right-menu{
+        margin-top: 20px;
+        display: hidden;
+    }
+     */
+}
+
+.landing-year{
+    color:var(--blue);
+    font-size: 8rem;
+}
+
+
+/*Registratin section*/
+.registrationSection{
+    background-image: url("../images/img4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken(20%);
+    background-position:right;
+}
